@@ -1,0 +1,1 @@
+# ADA-2025---A-Multimodal-Dataset-for-Dry-Stress-Detection-in-Sugar-Beets
