@@ -1,0 +1,17 @@
+# Dataset files — not tracked (download separately via dataset card)
+data/
+
+# Generated figure outputs
+analysis/figures/
+example_figure/
+paper/figures/
+
+# Input data and assets for paper figure scripts (large files not tracked)
+paper/ADA_2.jpg
+paper/plant_height/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
