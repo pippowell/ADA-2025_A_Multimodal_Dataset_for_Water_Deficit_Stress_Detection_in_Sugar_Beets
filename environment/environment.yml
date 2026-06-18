@@ -15,3 +15,5 @@ dependencies:
   - tqdm>=4.66
   - pillow>=10.0
   - glymur>=0.12
+  - opencv>=4.8
+  - plyfile>=1.0

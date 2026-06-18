@@ -9,3 +9,5 @@ openpyxl>=3.1
 tqdm>=4.66
 Pillow>=10.0
 glymur>=0.12
+opencv-python>=4.8
+plyfile>=1.0

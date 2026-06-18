@@ -10,6 +10,16 @@ paper/figures/
 paper/ADA_2.jpg
 paper/plant_height/
 
+# Keep directory structure, ignore generated outputs
+analysis/plant_height/processed/*
+!analysis/plant_height/processed/.gitkeep
+
+analysis/plant_height/figures/*
+!analysis/plant_height/figures/.gitkeep
+
+analysis/plant_height/models/*
+!analysis/plant_height/models/.gitkeep
+
 # Python cache
 __pycache__/
 *.pyc

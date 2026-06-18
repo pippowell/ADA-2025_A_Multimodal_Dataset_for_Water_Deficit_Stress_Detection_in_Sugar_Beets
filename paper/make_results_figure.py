@@ -90,7 +90,7 @@ def load_thermal() -> dict[str, pd.DataFrame]:
 
 
 def load_plant_height() -> dict[str, pd.DataFrame]:
-    df = pd.read_csv(PAPER / "plant_height" / "depth_results_w1_w2_values.csv")
+    df = pd.read_csv(PAPER / "plant_height" / "processed" / "depth_results_w1_w2_values.csv")
     df["date"] = pd.to_datetime(df["date"], format="%Y_%m_%d")
 
     out: dict[str, pd.DataFrame] = {}

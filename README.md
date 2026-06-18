@@ -74,11 +74,21 @@ Generates the three publication figures from the processed CSVs produced in Step
 python analysis/combined/make_figures.py
 ```
 
+**Step 5 - Plant Height Estimation Pipeline (`analysis/plant_height/run_plant_height_pipeline.py`)**
+Builds RGB+depth point clouds, computes vegetation-filtered depth metrics, generates W1/W2 trajectory plots, and fits a mixed-effects model with random intercept per plant
+
+```
+python analysis/plant_height/run_plant_height_pipeline.py --data-root D:/staged
+```
+
+Defaults (including pipeline/model date windows and thresholds) are defined in: `analysis/plant_height/config.py`. More information on the height estimation pipeline is provided in the respective [README](analysis/plant_height/README.md).
+
+
 ### Paper Figure Scripts
 
 The `paper/` folder contains two standalone scripts used to produce the figures in the ADA 2025 paper. These are independent of the main analysis pipeline and can be run from the repository root using the same `ada2025` environment.
 
-**`paper/make_results_figure.py`** — Generates the four-panel results figure (plant height, NDVI, SIPI, leaf-to-air temperature) for W1 vs W2 over the Sept 1–14 window. Reads from `analysis/leaf_air_temp/thermal_analysis.json`, the hyperspectral Excel file in `data/`, and a plant height CSV at `paper/plant_height/depth_results_w1_w2_values.csv`. Outputs `paper/results_multimodal.pdf` and `paper/results_multimodal.png`.
+**`paper/make_results_figure.py`** — Generates the four-panel results figure (plant height, NDVI, SIPI, leaf-to-air temperature) for W1 vs W2 over the Sept 1–14 window. Reads from `analysis/leaf_air_temp/thermal_analysis.json`, the hyperspectral Excel file in `data/`, and a plant height CSV at `analysis/plant_height/processed/depth_results_w1_w2_values.csv`. Outputs `paper/results_multimodal.pdf` and `paper/results_multimodal.png`.
 
 ```
 python paper/make_results_figure.py
